@@ -1,0 +1,14 @@
+dbt_tutorial:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 4
+      host: host.docker.internal
+      port: 5432
+      user: postgres
+      pass: postgres
+      dbname: Adventureworks
+      schema: warehouse
+
+  target: dev

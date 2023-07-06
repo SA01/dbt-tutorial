@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: "Sales fact table"
+    columns:
+      - name: salesorderid
+        description: "sales order id from salesorderheader table"
+      
+      - name: salesorderdetailid
+        description: "sales order detail id from the salesorderdetail table"
+      
+      - name: revisionnumber
+        description: ""
+      
+      - name: orderdate
+        description: ""
+      
+      - name: duedate
+        description: ""
+      
+      - name: shipdate
+        description: ""
+      
+      - name: status
+        description: ""
+      
+      - name: onlineorderflag
+        description: ""
+
+      - name: purchaseordernumber
+        description: ""
+      
+      - name: subtotal
+        description: ""
+      
+      - name: taxamt
+        description: ""
+      
+      - name: freight
+        description: ""
+      
+      - name: totaldue
+        description: ""
+      
+      - name: carriertrackingnumber
+        description: ""
+      
+      - name: orderqty
+        description: ""      
+
+      - name: productid
+        description: "ID of the product in product dimension" 
+        tests:
+          - relationships:
+              to: ref('dim_product')
+              field: productid
+      
+      - name: specialofferid
+        description: ""   
+      
+      - name: unitprice
+        description: ""   
+      
+      - name: unitpricediscount
+        description: ""                                     

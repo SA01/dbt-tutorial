@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: sales_order_detail
+    description: "Intermediate sales order detail table"
+    columns:
+      - name: salesorderid
+        description: "sales order id"
+      
+      - name: salesorderdetailid
+        description: "foreign key to sales order detail id"
+      
+      - name: carriertrackingnumber
+        description: ""
+      
+      - name: orderqty
+        description: ""
+      
+      - name: productid
+        description: "Foreign key to product table"
+      
+      - name: specialofferid
+        description: ""
+      
+      - name: unitprice
+        description: ""
+      
+      - name: unitpricediscount
+        description: ""
+      
+      - name: row_id
+        description: "Row Identifier"
+        tests:
+          - not_null
+          - unique
+      
+      - name: modifieddate
+        description: ""      
